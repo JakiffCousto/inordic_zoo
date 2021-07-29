@@ -1,12 +1,21 @@
 package com.zoo.animal;
-
 public class Shepherd extends Wolf{
     private String play;
     public Shepherd(String name, int age, char gender, float weight) {
         super(name, age, gender, weight);
-       // this.play=play;
-
     }
+
+    @Override
+    public String toString() {
+
+        return "Shepherd{" +
+                "name='" + getName()+ '\'' +
+                ", age=" + getAge() +
+                ", gender=" + getGender() +
+                ", weight=" + getWeight() +
+                '}';
+    }
+
     public void say() {
         System.out.println("GAV-GAV");
     }

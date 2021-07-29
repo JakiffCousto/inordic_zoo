@@ -1,11 +1,17 @@
 package com.zoo.animal;
 
-public class
-Wolf {
+public class Wolf extends Animal{
     private String name;
     private int age;
     private char gender;
     private float weight;
+
+    public Wolf(String name, int age, char gender, float weight) {
+        this.name = name;
+        this.age = age;
+        this.gender = gender;
+        this.weight = weight;
+    }
 
     public String getName() {
         return name;
@@ -39,13 +45,6 @@ Wolf {
         this.weight = weight;
     }
 
-    public Wolf(String name, int age, char gender, float weight) {
-        this.name = name;
-        this.age = age;
-        this.gender = gender;
-        this.weight = weight;
-
-    }
     public void eat() {
         System.out.println("I'm eating");
     }
@@ -58,9 +57,18 @@ Wolf {
         String className = this.getClass().getSimpleName();
         System.out.println("Name of Class:" + className);
     }
-    public String togetClass() {return  getClass().getSimpleName();
+    public String togetClass() {
+        return
+                getClass().getSimpleName();
     }
 
-
-
+    @Override
+    public String toString() {
+        return "Wolf{" +
+                "name='" + name + '\'' +
+                ", age=" + age +
+                ", gender=" + gender +
+                ", weight=" + weight +
+                '}';
+    }
 }
